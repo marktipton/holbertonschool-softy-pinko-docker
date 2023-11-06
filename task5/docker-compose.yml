@@ -5,7 +5,6 @@ services:
     build:
       context: ./back-end
       dockerfile: Dockerfile
-    image: ubuntu:latest
     ports:
       - "5252"
 
@@ -13,7 +12,6 @@ services:
     build:
       context: ./front-end
       dockerfile: Dockerfile
-    image: nginx:latest
     ports:
       - "9000"
 
@@ -21,7 +19,6 @@ services:
     build:
       context: ./proxy
       dockerfile: Dockerfile
-    image: nginx:latest
     ports:
       - "80:80"
     depends_on:
